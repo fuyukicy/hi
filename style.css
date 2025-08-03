@@ -1,216 +1,29 @@
 body {
-  font-family: 'Press Start 2P', cursive;
-  margin: 0;
-  background-color: #0a0a2a;
-  background-image: url('https://img.freepik.com/premium-vector/pixel-art-night-sky-background-with-clouds-stars-game-8-bit_27462133.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #ffe066;
+  font-family: "Trebuchet MS", sans-serif;
+  background-color: #0c1f2c;
+  color: #fff;
   text-align: center;
-  overflow-x: hidden;
-  position: relative;
-}
-
-.intro-screen {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  color: #ffe066;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  animation: fadeIn 1s ease;
-  font-family: 'Press Start 2P', cursive;
+  padding: 50px;
 }
 
 .start-btn {
-  font-size: 14px;
-  padding: 12px 24px;
-  background-color: #ffe066;
+  padding: 10px 20px;
+  background-color: #ffcc00;
   border: none;
-  border-radius: 10px;
-  color: #000;
-  margin-top: 30px;
   cursor: pointer;
-  box-shadow: 0 4px #444;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-h1, h2, #loader {
-  margin: 30px 0 10px;
-  text-shadow: 2px 2px #000;
-  font-size: 18px;
-  font-family: 'Press Start 2P', cursive;
-}
-
-#cookie {
-  width: 140px;
+.fortune-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  font-size: 20px;
   margin-top: 30px;
-  cursor: pointer;
-  animation: float 2s infinite ease-in-out;
-  z-index: 2;
 }
 
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-#message {
-  margin-top: 40px;
-  font-size: 14px;
-  white-space: pre-line;
-  color: #fff8dc;
-  text-shadow: 1px 1px #000;
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 20px;
-  border-radius: 12px;
-  display: none;
-  font-family: 'Press Start 2P', cursive;
-  animation: powerUp 0.8s ease;
-}
-
-@keyframes powerUp {
-  0% { transform: scale(0); opacity: 0; }
-  60% { transform: scale(1.2); opacity: 1; }
-  100% { transform: scale(1); }
-}
-
-.fortune-container {
-  padding: 30px;
-  position: relative;
-  z-index: 2;
-}
-
-#loader {
-  font-size: 12px;
-  color: #ffe066;
-  animation: flicker 1.5s infinite alternate;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes flicker {
-  from { opacity: 0.3; }
-  to { opacity: 1; }
-}
-
-.sparkle {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: gold;
-  border-radius: 50%;
-  animation: sparkle 1s ease-out forwards;
-  z-index: 3;
-}
-
-@keyframes sparkle {
-  0% { opacity: 1; transform: scale(1); }
-  100% { opacity: 0; transform: scale(3); }
-}
-
-/* moon */
-.moon {
-  position: absolute;
-  top: 100%;
-  left: 80%;
-  width: 60px;
-  height: 60px;
-  background: #fdf6c6;
-  border-radius: 50%;
-  box-shadow: 0 0 20px #fdf6c6;
-  animation: riseMoon 6s ease-out forwards;
-  z-index: 1;
-}
-
-@keyframes riseMoon {
-  to { top: 10%; }
-}
-
-/* fog layer */
-.fog {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 200%;
-  height: 100px;
-  background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-  animation: driftFog 60s linear infinite;
-  z-index: 0;
-}
-
-@keyframes driftFog {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-/* shooting stars */
-.shooting-star {
-  position: absolute;
-  width: 2px;
-  height: 80px;
-  background: white;
-  animation: shoot 1s ease-in forwards;
-  z-index: 3;
-}
-
-@keyframes shoot {
-  0% { opacity: 1; transform: translate(-100px, 0) rotate(45deg); }
-  100% { opacity: 0; transform: translate(100px, -100px) rotate(45deg); }
-}
-
-audio {
-  display: none;
-}
-* {
-  font-family: 'Press Start 2P', monospace !important;
-  box-sizing: border-box;
-}
-
-@keyframes scrollSky {
-  0% { background-position: 0 0; }
-  100% { background-position: -2000px 0; }
-}
-
-body {
-  font-family: 'Press Start 2P', cursive;
-  margin: 0;
-  background-color: #0a0a2a;
-  background-image: url('https://img.freepik.com/premium-vector/pixel-art-night-sky-background-with-clouds-stars-game-8-bit_27462133.jpg');
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-  background-position: 0 0;
-  animation: scrollSky 60s linear infinite;
-  color: #ffe066;
-  text-align: center;
-  overflow-x: hidden;
-  position: relative;
-}
-background-repeat: repeat-x;
-background-size: auto 100%;
-body {
-  font-family: 'Press Start 2P', cursive;
-  margin: 0;
-  background-color: #0a0a2a;
-  background-image: url('https://img.freepik.com/premium-vector/pixel-art-night-sky-background-with-clouds-stars-game-8-bit_27462133.jpg');
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-  background-position: 0 0;
-  animation: scrollSky 60s linear infinite;
-  color: #ffe066;
-  text-align: center;
-  overflow-x: hidden;
-  position: relative;
-}
-
-@keyframes scrollSky {
-  0% { background-position: 0 0; }
-  100% { background-position: -2000px 0; }
+.fortune-text.reveal {
+  opacity: 1;
+  transform: translateY(0);
 }
